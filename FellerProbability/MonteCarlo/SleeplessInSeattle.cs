@@ -39,13 +39,14 @@ namespace FellerProbability.MonteCarlo
             return 1.0 * annieBeforeSam / _sampleSize;
         }
 
-        public double EvaluateDifferenceInArrival()
+        public async Task<double> EvaluateDifferenceInArrival()
         {
             var overallDiff = 0.0;
 
             Parallel.For(0, _sampleSize, i =>
             {
-                var diff = Math.Abs(_annieComes[i] - _samComes[i]);
+                //var diff = Math.Abs(_annieComes[i] - _samComes[i]);
+                var diff = _annieComes[i] - _samComes[i];
                 lock (this)
                 {
                     overallDiff += diff;
@@ -53,6 +54,22 @@ namespace FellerProbability.MonteCarlo
             });
 
             return overallDiff / _sampleSize;
+        }
+        public async Task<double> EvaluateErrorForArrivalDifference(double mean)
+        {
+            var numerator = 0.0;
+
+            Parallel.For(0, _sampleSize, i =>
+            {
+                var diff = _annieComes[i] - _samComes[i];
+                lock (this)
+                {
+                    numerator += (diff - mean) * (diff - mean);
+                }
+            });
+
+            //error = sigma/ N^1/2; sigma = (sum(deviations from mean)^2/N)^1/2 => error = sum()^1/2 / N
+            return Math.Sqrt(numerator) / _sampleSize;
         }
 
         private Task<List<double>> GenerateArriveTimes(double lowerBound, double upperBound)
