@@ -65,7 +65,7 @@ namespace FellerProbability.DataStructures
         private int? GetParentIndex(int childIndex)
         {
             var parentIndex = (childIndex - 1) / 2;
-            return parentIndex >= 0 ? parentIndex : default(int?);
+            return childIndex == 0 ? default(int?) : parentIndex;
         }
 
         private int? GetProperChildIdx(int parentIndex)
