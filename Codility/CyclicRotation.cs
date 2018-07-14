@@ -7,18 +7,20 @@ namespace Codility
     {
         public int[] Shift(int[] source, int distance)
         {
-            var result = source.ToArray();
-            for (int step = 0; step < distance%result.Length; step++)
+            if (source == null || !source.Any())
+                return source;
+
+            var shift = distance % source.Length;
+            if (shift == 0)
+                return source;
+
+            var result = new int[source.Length];
+            for (int i = 0; i < source.Length; i++)
             {
-                var tmp = result[result.Length - 1];
-                for (int idx = result.Length -1 ; idx >0 ; idx--)
-                {
-                    result[idx] = result[idx - 1];
-                }
-
-                result[0] = tmp;
+                var resultIndex = (i + shift) % source.Length;
+                result[resultIndex] = source[i];
             }
-
+            
             return result;
         }
     }
