@@ -7,32 +7,53 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FellerProbability", "Feller
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FellerProbabilityTests", "FellerProbabilityTests\FellerProbabilityTests.csproj", "{24DB77F9-E8D7-4B36-A3EA-E2896335DB5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codility", "Codility\Codility.csproj", "{DC558000-E2B7-4BA1-8BDB-BE76D4126085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codility", "Codility\Codility.csproj", "{DC558000-E2B7-4BA1-8BDB-BE76D4126085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codility.UnitTests", "Codility.UnitTests\Codility.UnitTests.csproj", "{4E968422-B7A9-42F0-B4FC-67DF959993BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codility.UnitTests", "Codility.UnitTests\Codility.UnitTests.csproj", "{4E968422-B7A9-42F0-B4FC-67DF959993BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteCarlo", "MonteCarlo\MonteCarlo.csproj", "{AD53FC09-94B4-4B1B-8E59-C8AC3FB50934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteCarlo.UnitTests", "MonteCarlo.UnitTests\MonteCarlo.UnitTests.csproj", "{8B8E227F-6084-4D26-8273-73BA5601F0D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		MonteCarlo|Any CPU = MonteCarlo|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E029FFC4-4F9D-4594-8D1E-7487CAE595BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E029FFC4-4F9D-4594-8D1E-7487CAE595BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E029FFC4-4F9D-4594-8D1E-7487CAE595BD}.MonteCarlo|Any CPU.ActiveCfg = MonteCarlo|Any CPU
 		{E029FFC4-4F9D-4594-8D1E-7487CAE595BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E029FFC4-4F9D-4594-8D1E-7487CAE595BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24DB77F9-E8D7-4B36-A3EA-E2896335DB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24DB77F9-E8D7-4B36-A3EA-E2896335DB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DB77F9-E8D7-4B36-A3EA-E2896335DB5F}.MonteCarlo|Any CPU.ActiveCfg = MonteCarlo|Any CPU
 		{24DB77F9-E8D7-4B36-A3EA-E2896335DB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24DB77F9-E8D7-4B36-A3EA-E2896335DB5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC558000-E2B7-4BA1-8BDB-BE76D4126085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC558000-E2B7-4BA1-8BDB-BE76D4126085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC558000-E2B7-4BA1-8BDB-BE76D4126085}.MonteCarlo|Any CPU.ActiveCfg = MonteCarlo|Any CPU
 		{DC558000-E2B7-4BA1-8BDB-BE76D4126085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC558000-E2B7-4BA1-8BDB-BE76D4126085}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E968422-B7A9-42F0-B4FC-67DF959993BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E968422-B7A9-42F0-B4FC-67DF959993BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E968422-B7A9-42F0-B4FC-67DF959993BC}.MonteCarlo|Any CPU.ActiveCfg = MonteCarlo|Any CPU
 		{4E968422-B7A9-42F0-B4FC-67DF959993BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E968422-B7A9-42F0-B4FC-67DF959993BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD53FC09-94B4-4B1B-8E59-C8AC3FB50934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD53FC09-94B4-4B1B-8E59-C8AC3FB50934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD53FC09-94B4-4B1B-8E59-C8AC3FB50934}.MonteCarlo|Any CPU.ActiveCfg = MonteCarlo|Any CPU
+		{AD53FC09-94B4-4B1B-8E59-C8AC3FB50934}.MonteCarlo|Any CPU.Build.0 = MonteCarlo|Any CPU
+		{AD53FC09-94B4-4B1B-8E59-C8AC3FB50934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD53FC09-94B4-4B1B-8E59-C8AC3FB50934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8E227F-6084-4D26-8273-73BA5601F0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8E227F-6084-4D26-8273-73BA5601F0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8E227F-6084-4D26-8273-73BA5601F0D3}.MonteCarlo|Any CPU.ActiveCfg = MonteCarlo|Any CPU
+		{8B8E227F-6084-4D26-8273-73BA5601F0D3}.MonteCarlo|Any CPU.Build.0 = MonteCarlo|Any CPU
+		{8B8E227F-6084-4D26-8273-73BA5601F0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8E227F-6084-4D26-8273-73BA5601F0D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
